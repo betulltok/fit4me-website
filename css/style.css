@@ -164,7 +164,10 @@ p {
   border-radius: 10px;
   font-size: 1.2rem;
 }
-
+.bmi-result h3,
+.bmi-result p {
+  text-align: center;
+}
 
 .bmi-result.show {
   display: block;
@@ -194,6 +197,7 @@ p {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 

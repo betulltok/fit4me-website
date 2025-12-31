@@ -11,24 +11,23 @@ body {
   line-height: 1.6;
 }
 
+/* ===== ÜST MENÜ ===== */
 header {
   background: #2c3e50;
-  color: #fff;
+  color: white;
   padding: 1rem 0;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100;
 }
 
 nav {
   max-width: 1200px;
   margin: auto;
   padding: 0 2rem;
-
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -43,7 +42,7 @@ nav {
 }
 
 .nav-links a {
-  color: #fff;
+  color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
 }
@@ -58,6 +57,7 @@ nav {
   border-radius: 5px;
 }
 
+/* ===== ANA İÇERİK ===== */
 main {
   margin-top: 80px;
   padding: 2rem;
@@ -66,15 +66,15 @@ main {
 .container {
   max-width: 1200px;
   margin: auto;
-  background: #fff;
+  background: white;
   padding: 2rem;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 h1 {
-  color: #2c3e50;
   text-align: center;
+  color: #2c3e50;
   margin-bottom: 1rem;
 }
 
@@ -93,6 +93,7 @@ p {
   text-align: justify;
 }
 
+/* Resim */
 .main-image {
   display: block;
   max-width: 800px;
@@ -101,20 +102,11 @@ p {
   border-radius: 5px;
 }
 
-ul {
-  margin: 1rem 0;
-  padding-left: 2rem;
-}
-
-ul li {
-  margin: 0.5rem 0;
-}
-
+/* Özellik kutuları */
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  margin: 2rem 0;
 }
 
 .feature-box {
@@ -124,11 +116,7 @@ ul li {
   border-left: 4px solid #3498db;
 }
 
-.feature-box h3 {
-  margin-top: 0;
-  color: #3498db;
-}
-
+/* BMI FORM */
 .bmi-form {
   max-width: 500px;
   margin: 2rem auto;
@@ -142,56 +130,48 @@ ul li {
 }
 
 .input-group label {
-  display: block;
   font-weight: bold;
+  display: block;
   margin-bottom: 0.5rem;
-  color: #2c3e50;
 }
 
 .input-group input {
   width: 100%;
   padding: 0.7rem;
-  font-size: 1rem;
   border: 1px solid #bdc3c7;
   border-radius: 3px;
 }
 
+/* Buton */
 .btn {
   width: 100%;
-  margin-top: 1rem;
-  padding: 0.8rem 2rem;
+  padding: 0.8rem;
   background: #3498db;
-  color: #fff;
+  color: white;
   border: none;
   border-radius: 3px;
-  cursor: pointer;
 }
 
 .btn:hover {
   background: #2980b9;
 }
 
+/* Sonuç alanı */
 .bmi-result {
   display: none;
   margin-top: 2rem;
   padding: 1.5rem;
-  text-align: center;
   background: #d5f4e6;
   border: 2px solid #27ae60;
   border-radius: 5px;
+  text-align: center;
 }
 
 .bmi-result.show {
   display: block;
 }
 
-.bmi-value {
-  margin: 1rem 0;
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #27ae60;
-}
-
+/* Alt bilgi alanları */
 .content-section {
   margin: 2rem 0;
   padding: 1.5rem;
@@ -199,56 +179,7 @@ ul li {
   border-radius: 5px;
 }
 
-.content-section h2 {
-  margin-top: 0;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #3498db;
-}
-
-.recommendations {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
-}
-
-.recommendation-box {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 5px;
-  border: 2px solid #3498db;
-}
-
-.recommendation-box h3 {
-  margin-top: 0;
-  color: #3498db;
-}
-.btn-link {
-  display: inline-block;
-  margin: 1rem 0;
-  padding: 0.7rem 1.5rem;
-  background: #3498db;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 3px;
-}
-
-.btn-link:hover {
-  background: #2980b9;
-}
-.info-box {
-  margin: 2rem 0;
-  padding: 1.5rem;
-  background: #fff3cd;
-  border: 1px solid #ffc107;
-  border-radius: 5px;
-}
-
-.info-box h3 {
-  margin-top: 0;
-  color: #856404;
-}
-
+/* Responsive */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -257,33 +188,13 @@ ul li {
 
   .nav-links {
     flex-direction: column;
-    gap: 0.5rem;
     text-align: center;
   }
 
-  .features,
-  .recommendations {
+  .features {
     grid-template-columns: 1fr;
   }
-
-  main,
-  .container {
-    padding: 1rem;
-  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

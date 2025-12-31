@@ -1,51 +1,39 @@
 function hesaplaBMI() {
+  const kilo = parseFloat(document.getElementById("weight").value);
+  const boy = parseFloat(document.getElementById("height").value);
 
-  var kilo = Number(document.getElementById("weight").value);
-  var boy = Number(document.getElementById("height").value);
-  var sonuc = document.getElementById("result");
+  const result = document.getElementById("result");
 
-  if (kilo <= 0 || boy <= 0 || isNaN(kilo) || isNaN(boy)) {
-    alert("Lütfen geçerli değerler giriniz.");
+  if (!kilo || !boy) {
+    alert("Lütfen kilo ve boy giriniz.");
     return;
   }
 
-  var boyMetre = boy / 100;
-  var bmi = kilo / (boyMetre * boyMetre);
-  bmi = bmi.toFixed(1);
+  const boyMetre = boy / 100;
+  const bmi = (kilo / (boyMetre * boyMetre)).toFixed(1);
 
-  var durum;
-  var renk;
-  var mesaj;
+  let durum = "";
 
   if (bmi < 18.5) {
     durum = "Zayıf";
-    renk = "orange";
-    mesaj = "Biraz kilo alman iyi olabilir.";
-  } 
-  else if (bmi < 25) {
+  } else if (bmi < 25) {
     durum = "Normal";
-    renk = "green";
-    mesaj = "Kilon ideal, böyle devam et.";
-  } 
-  else if (bmi < 30) {
+  } else if (bmi < 30) {
     durum = "Fazla kilolu";
-    renk = "darkorange";
-    mesaj = "Biraz dikkat edersen iyi olur.";
-  } 
-  else {
+  } else {
     durum = "Obez";
-    renk = "red";
-    mesaj = "Sağlığın için bir uzmana görünmelisin.";
   }
 
-  sonuc.innerHTML =
-    "<h3>BMI Sonucun</h3>" +
-    "<p style='color:" + renk + "; font-weight:bold'>" + durum + "</p>" +
-    "<p>" + mesaj + "</p>" +
-    "<p><b>" + bmi + "</b></p>";
+  result.innerHTML = `
+    <h3>BMI Sonucunuz</h3>
+    <p><strong>${bmi}</strong></p>
+    <p>${durum}</p>
+  `;
 
-  sonuc.className = "bmi-result";
+  result.classList.add("show");
 }
+
+
 
 
 

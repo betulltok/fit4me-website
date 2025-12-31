@@ -202,6 +202,25 @@ p {
     grid-template-columns: 1fr;
   }
 }
+.bmi-blue {
+  color: #2980b9;
+  border-color: #2980b9;
+  background: #eaf2f8;
+}
+
+.bmi-green {
+  color: #27ae60;
+  border-color: #27ae60;
+  background: #e9f7ef;
+}
+
+.bmi-red {
+  color: #c0392b;
+  border-color: #c0392b;
+  background: #fdecea;
+}
+
+
 
 
 

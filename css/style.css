@@ -148,6 +148,14 @@ p, li {
   margin: 20px auto;
   border-radius: 8px;
 }
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+
 
 
 

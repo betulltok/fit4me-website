@@ -158,14 +158,13 @@ p {
 
 /* Sonuç alanı */
 .bmi-result {
-  display: none;
-  margin-top: 2rem;
-  padding: 1.5rem;
-  background: #d5f4e6;
-  border: 2px solid #27ae60;
-  border-radius: 5px;
   text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.2rem;
 }
+
 
 .bmi-result.show {
   display: block;
@@ -195,6 +194,7 @@ p {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 

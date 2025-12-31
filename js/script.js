@@ -1,7 +1,6 @@
 function hesaplaBMI() {
   const kilo = parseFloat(document.getElementById("weight").value);
   const boy = parseFloat(document.getElementById("height").value);
-
   const result = document.getElementById("result");
 
   if (!kilo || !boy) {
@@ -32,6 +31,8 @@ function hesaplaBMI() {
 
   result.classList.add("show");
 }
+
+
 
 
 

@@ -157,16 +157,17 @@ p {
 }
 
 /* Sonuç alanı */
+
+.bmi-result h3,
+.bmi-result p {
+  text-align: center;
+}
 .bmi-result {
   text-align: center;
   margin-top: 20px;
   padding: 15px;
   border-radius: 10px;
   font-size: 1.2rem;
-}
-.bmi-result h3,
-.bmi-result p {
-  text-align: center;
 }
 
 .bmi-result.show {
@@ -197,6 +198,7 @@ p {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Hesaplama | Fit4Me</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Fit4Me</div>
+    <div class="nav-links">
+      <a href="index.html">Anasayfa</a>
+      <a href="contact.html" class="active">BMI Hesaplama</a>
+      <a href="exercises.html">Egzersizler</a>
+      <a href="nutrition.html">Beslenme</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="container">
+    <h1>BMI Hesaplama</h1>
+    
+    <div class="bmi-form">
+      <h2 style="margin-top: 0;">BMI Hesaplayıcı</h2>
+      <p>Kilonuzu ve boyunuzu girerek vücut kitle indeksinizi öğrenin.</p>
+      
+      <div class="input-group">
+        <label for="weight">Kilonuz (kg):</label>
+        <input type="number" id="weight" placeholder="Örn: 70">
+      </div>
+      
+      <div class="input-group">
+        <label for="height">Boyunuz (cm):</label>
+        <input type="number" id="height" placeholder="Örn: 175">
+      </div>
+      
+      <button class="btn" onclick="hesaplaBMI()">Hesapla</button>
+      
+      <div id="result" class="bmi-result"></div>
+    </div>
+
+    <div class="info-box">
+      <h3>BMI Nedir?</h3>
+      <p>
+        Vücut Kitle İndeksi (BMI), kilo ve boy oranınıza göre sağlıklı kilo 
+        aralığında olup olmadığınızı gösteren bir ölçümdür.
+      </p>
+      
+      <h3>BMI Kategorileri:</h3>
+      <ul>
+        <li><strong>18.5'in altı:</strong> Zayıf</li>
+        <li><strong>18.5 - 24.9:</strong> Normal</li>
+        <li><strong>25.0 - 29.9:</strong> Fazla Kilolu</li>
+        <li><strong>30.0 ve üzeri:</strong> Obez</li>
+      </ul>
+    </div>
+
+    <p style="text-align: center; margin-top: 2rem;">
+      <a href="exercises.html" class="btn-link">Egzersizleri İncele</a>
+      <a href="nutrition.html" class="btn-link">Beslenme Tavsiyeleri</a>
+    </p>
+  </div>
+</main>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
+
+

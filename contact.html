@@ -24,24 +24,22 @@
   <div class="container">
     <h1>BMI Hesaplama</h1>
     
-    <div class="bmi-form">
-      <h2 style="margin-top: 0;">BMI Hesaplayıcı</h2>
-      <p>Kilonuzu ve boyunuzu girerek vücut kitle indeksinizi öğrenin.</p>
-      
-      <div class="input-group">
-        <label for="weight">Kilonuz (kg):</label>
-        <input type="number" id="weight" placeholder="Örn: 70">
-      </div>
-      
-      <div class="input-group">
-        <label for="height">Boyunuz (cm):</label>
-        <input type="number" id="height" placeholder="Örn: 175">
-      </div>
-      
-      <button class="btn" onclick="hesaplaBMI()">Hesapla</button>
-      
-      <div id="result" class="bmi-result"></div>
+  <div class="bmi-form">
+   <div class="input-group">
+      <label>Kilo (kg)</label>
+      <input type="number" id="weight">
     </div>
+
+    <div class="input-group">
+        <label>Boy (cm)</label>
+        <input type="number" id="height">
+    </div>
+    
+    <button class="btn" onclick="hesaplaBMI()">Hesapla</button>
+    
+    <div id="result" class="bmi-result"></div>
+  </div>
+
 
     <div class="info-box">
       <h3>BMI Nedir?</h3>
@@ -70,5 +68,6 @@
 
 </body>
 </html>
+
 
 

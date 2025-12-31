@@ -3,14 +3,14 @@ function hesaplaBMI() {
   let boy = parseFloat(document.getElementById("height").value) / 100;
   let result = document.getElementById("result");
 
-  if (!kilo || !boy) {
-    alert("Lütfen kilo ve boy giriniz.");
+  if (!kilo || !boy || kilo <= 0 || boy <= 0) {
+    alert("Lütfen geçerli kilo ve boy giriniz.");
     return;
   }
 
   let bmi = (kilo / (boy * boy)).toFixed(1);
 
-  result.className = "bmi-result show";
+  result.className = "bmi-result show"; 
 
   let durum = "";
 
@@ -33,10 +33,11 @@ function hesaplaBMI() {
 
   result.innerHTML = `
     <h3>BMI Sonucunuz</h3>
-    <p><strong>${bmi}</strong></p>
-    <p>${durum}</p>
+    <p style="font-size: 1.5rem;"><strong>${bmi}</strong></p>
+    <p>Durum: <strong>${durum}</strong></p>
   `;
 }
+
 
 
 

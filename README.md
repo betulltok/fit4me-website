@@ -2,6 +2,8 @@
 
 Fit4Me, sağlıklı yaşam için, kullanıcıların temel fitness ve beslenme bilgilerine ulaşabildiği basit bir web sitesidir. Proje kapsamında kullanıcıların boy ve kilo bilgilerine göre Vücut Kitle İndeksi (BMI) hesaplaması yapılabilmektedir.
 
+Canlı site: https://betulltok.github.io/fit4me-website/
+
 ## Projenin Amacı
 
 Bu projenin amacı:

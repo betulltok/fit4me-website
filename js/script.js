@@ -1,49 +1,53 @@
 function hesaplaBMI() {
-  const kilo = parseFloat(document.getElementById('weight').value);
-  const boy = parseFloat(document.getElementById('height').value);
-  const result = document.getElementById('result');
 
-  if (!kilo || !boy || kilo <= 0 || boy <= 0) {
-    alert('Lütfen geçerli kilo ve boy değerleri girin!');
+  var kilo = Number(document.getElementById("weight").value);
+  var boy = Number(document.getElementById("height").value);
+  var sonuc = document.getElementById("result");
+
+  if (kilo <= 0 || boy <= 0 || isNaN(kilo) || isNaN(boy)) {
+    alert("Lütfen geçerli değerler giriniz.");
     return;
   }
 
-  const boyMetre = boy / 100;
-  const bmi = (kilo / (boyMetre * boyMetre)).toFixed(1);
+  var boyMetre = boy / 100;
+  var bmi = kilo / (boyMetre * boyMetre);
+  bmi = bmi.toFixed(1);
 
-  let durum = '';
-  let mesaj = '';
-  let renk = '';
+  var durum;
+  var renk;
+  var mesaj;
 
   if (bmi < 18.5) {
-    durum = 'Zayıf';
-    renk = '#f39c12';
-    mesaj = 'Kilo almanız önerilir. Sağlıklı beslenme ve güç antrenmanlarına odaklanın.';
-  } else if (bmi < 25) {
-    durum = 'Normal';
-    renk = '#27ae60';
-    mesaj = 'Harika! İdeal kilonuzdasınız. Bu durumu korumaya devam edin.';
-  } else if (bmi < 30) {
-    durum = 'Fazla Kilolu';
-    renk = '#e67e22';
-    mesaj = 'Kilo vermeniz önerilir. Dengeli beslenme ve düzenli egzersiz yapın.';
-  } else {
-    durum = 'Obez';
-    renk = '#e74c3c';
-    mesaj = 'Sağlığınız için kilo vermeniz gerekiyor. Bir diyetisyen ve doktora danışmanızı öneririz.';
+    durum = "Zayıf";
+    renk = "orange";
+    mesaj = "Biraz kilo alman iyi olabilir.";
+  } 
+  else if (bmi < 25) {
+    durum = "Normal";
+    renk = "green";
+    mesaj = "Kilon ideal, böyle devam et.";
+  } 
+  else if (bmi < 30) {
+    durum = "Fazla kilolu";
+    renk = "darkorange";
+    mesaj = "Biraz dikkat edersen iyi olur.";
+  } 
+  else {
+    durum = "Obez";
+    renk = "red";
+    mesaj = "Sağlığın için bir uzmana görünmelisin.";
   }
 
-  result.innerHTML = `
-    <h3>BMI Sonucunuz</h3>
-    <div class="bmi-value" style="color: ${renk};">${bmi}</div>
-    <p style="font-size: 1.3rem; color: ${renk}; font-weight: bold;">
-      ${durum}
-    </p>
-    <p>${mesaj}</p>
-  `;
+  sonuc.innerHTML =
+    "<h3>BMI Sonucun</h3>" +
+    "<p style='color:" + renk + "; font-weight:bold'>" + durum + "</p>" +
+    "<p>" + mesaj + "</p>" +
+    "<p><b>" + bmi + "</b></p>";
 
-  result.className = 'bmi-result show';
+  sonuc.className = "bmi-result";
 }
+
+
 
 
 

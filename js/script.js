@@ -1,26 +1,30 @@
 function hesaplaBMI() {
-  const kilo = parseFloat(document.getElementById("weight").value);
-  const boy = parseFloat(document.getElementById("height").value);
-  const result = document.getElementById("result");
+  let kilo = document.getElementById("weight").value;
+  let boy = document.getElementById("height").value / 100;
+  let result = document.getElementById("result");
 
-  if (!kilo || !boy) {
+  if (kilo === "" || boy === 0) {
     alert("Lütfen kilo ve boy giriniz.");
     return;
   }
 
-  const boyMetre = boy / 100;
-  const bmi = (kilo / (boyMetre * boyMetre)).toFixed(1);
+  let bmi = (kilo / (boy * boy)).toFixed(1);
+
+  result.className = "bmi-result show"; // reset
 
   let durum = "";
-
+  
   if (bmi < 18.5) {
     durum = "Zayıf";
-  } else if (bmi < 25) {
-    durum = "Normal";
-  } else if (bmi < 30) {
-    durum = "Fazla kilolu";
-  } else {
-    durum = "Obez";
+    result.classList.add("bmi-blue");
+  } 
+  else if (bmi >= 18.5 && bmi < 25) {
+    durum = "Normal Kilolu";
+    result.classList.add("bmi-green");
+  } 
+  else {
+    durum = "Fazla Kilolu";
+    result.classList.add("bmi-red");
   }
 
   result.innerHTML = `
@@ -28,9 +32,8 @@ function hesaplaBMI() {
     <p><strong>${bmi}</strong></p>
     <p>${durum}</p>
   `;
-
-  result.classList.add("show");
 }
+
 
 
 
